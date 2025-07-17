@@ -98,19 +98,21 @@ function Register(){
 }, [index]);
 
     const renderView = () => {
-        if(context.registers.length > 0){
-          return(
-            context.registers.map(item => (
-              <CardRegister key={item.id} data={item}/>
-            )) 
-          )
-        }else{
-          return(
-            <div className='flex flex-col pt-2'>
-            <span className='text-2xl font-extrabold text-gray-300 text-center'> No hay registros </span>
-            <CubeIcon className='w-full h-1/4 text-gray-300'/>
-            </div>
-          )
+        if(context.registers){
+            if(context.registers.length > 0){
+                return(
+                context.registers.map(item => (
+                    <CardRegister key={item.id} data={item}/>
+                )) 
+                )
+            }else{
+                return(
+                <div className='flex flex-col pt-2'>
+                <span className='text-2xl font-extrabold text-gray-300 text-center'> No hay registros </span>
+                <CubeIcon className='w-full h-1/4 text-gray-300'/>
+                </div>
+                )
+            }
         }
     }
     
