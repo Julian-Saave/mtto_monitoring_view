@@ -3,7 +3,7 @@ import { ScadaContext } from '../../Context'
 import { XCircleIcon } from '@heroicons/react/24/solid'
 import { useSnackbar } from 'notistack'
 
-const registerForm = ()=> {
+const RegisterForm = ()=> {
     const context = useContext(ScadaContext)
     const apiBaseUrl = import.meta.env.VITE_API_URL_MONITORING;
     
@@ -146,4 +146,4 @@ const registerForm = ()=> {
     )
 }
 
-export default registerForm
+export default RegisterForm
