@@ -69,7 +69,7 @@ const RegisterForm = ()=> {
                 name:'',
                 type:'',
                 number: 0,
-                length: 1,
+                decilmal_places: 0,
                 id_group:0})
     }
 
@@ -125,13 +125,13 @@ const RegisterForm = ()=> {
                             <option value=""></option>
                             {renderTypes()}
                         </select>
-                        <label className='text-lg font-medium'>longitud:</label>
+                        <label className='text-lg font-medium'>Decimales:</label>
                         <input 
                             type='number' 
-                            min="1" 
-                            max="2" 
-                            name='length'
-                            value={context.registerForm.length}
+                            min="0" 
+                            max="4" 
+                            name='decilmal_places'
+                            value={context.registerForm.decilmal_places}
                             onChange={handleChange} 
                             step="1"
                             required 
