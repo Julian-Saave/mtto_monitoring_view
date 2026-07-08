@@ -17,14 +17,21 @@ apt-get install git
 ```
 ---
 
-## intalation
+## instalation
+### Clone repository
 ```bash
 git clone https://github.com/Julian-Saave/mtto_monitoring_view.git #Copy repository
 cd mtto_monitoring_view
 npm install #Install dependencies
+```
+### Configure enviroment variables
+```bash
+sudo nano .env.example
+# Modify values of variables and save as .env
+```
 
-#configure enviroment variables
-
+### Create services auto run
+```bash
 npm run build #Create folder production
 npm install -g serve #Install server
 npm install -g pm2 #Install services manager
